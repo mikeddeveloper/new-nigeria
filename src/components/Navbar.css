@@ -1,0 +1,107 @@
+/* Navbar base */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Center container */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar brand logo */
+.navbar-brand img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #d1d5db;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover & active nav links */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #3b82f6;
+  border-radius: 2px;
+}
+
+/* Mobile navbar (Bootstrap handles collapse) */
+.navbar-toggler {
+  border: none;
+}
+
+/* Scroll spacing for page */
+body {
+  padding-top: 80px; /* Adjust this to your navbar height */
+}
+/* Make navbar links smaller and nice */
+.small-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.small-text:hover,
+.small-text.active {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Youth Engage text */
+.navbar-brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+/* Remove any unwanted underline globally for nav links */
+.navbar .nav-link {
+  text-decoration: none !important;
+  box-shadow: none !important;
+}
+/* Remove underline from navbar links */
+
+/* Hero Section adjust margin */
+.hero {
+  margin-top: 60px;
+}
+
+/* Body background and padding */
+body {
+  background: #0f172a; /* Dark bluish background */
+  padding-top: 60px;
+}

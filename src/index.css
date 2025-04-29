@@ -1,0 +1,199 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffc107; /* Change hover color */
+  text-decoration: underline;
+}
+
+/* Active Link (underlined) */
+.navbar-nav .nav-item .nav-link.active {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #ffc107; /* Highlight color */
+}
+
+/* Navbar Collapse Transition (for smooth effect) */
+.navbar-collapse {
+  transition: max-height 0.3s ease-in-out;
+}
+
+.navbar-collapse.collapse {
+  max-height: 0;
+}
+
+.navbar-collapse.show {
+  max-height: 500px;
+}
+
+/* Hero Section Styles */
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header .d-flex {
+  width: 500%;
+  animation: scroll 30s linear infinite;
+}
+
+header .d-flex img {
+  width: 20%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header .position-absolute {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* AOS Animation Styles */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Animation for Scrolling Background */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-80%); }
+}
+
+/* Optional: Smooth scroll for links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Button Styles (Example) */
+.btn {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e0a800;
+}
+/* Navbar Underline Active Link */
+.navbar-nav .nav-item .nav-link.active {
+  text-decoration: underline;
+  font-weight: bold; /* Optional: make active link bold */
+  color: #ffc107; /* Change active link color if you like */
+}
+/* Hero Section Styles */
+header {
+  position: relative;
+  height: 100vh; /* Ensures the header takes the full height of the viewport */
+  overflow: hidden;
+}
+
+header .d-flex {
+  width: 500%; /* To fit 5 images */
+  animation: scroll 30s linear infinite;
+}
+
+header .hero-image {
+  width: 20%;
+  height: 100vh; /* Ensure images take full height */
+  object-fit: cover;
+}
+
+header .position-absolute {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+/* Custom Animation for Scrolling */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-80%); }
+}
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, p {
+  margin: 0;
+}
+
+/* Add padding to body to prevent content from being hidden behind fixed navbar */
+body {
+  padding-top: 70px; /* Adjust this based on your navbar height */
+}

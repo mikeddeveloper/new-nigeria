@@ -1,0 +1,64 @@
+.cta-section {
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-buttons .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 30px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #ffffff;
+    color: #2563eb;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #ffffff;
+    color: #2563eb;
+  }
+  
+  @media (max-width: 768px) {
+    .cta-content h2 {
+      font-size: 2rem;
+    }
+    .cta-content p {
+      font-size: 1rem;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
