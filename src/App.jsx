@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 import AboutUs from "./components/AboutUS";
 import Vision from "./components/Vision";
 import Mission from "./components/Mission";
-import OurPersonalities from "./components/Ourpersonalities";
+import OurPersonalities from "./components/OurPersonalities";
 import Testimonials from "./components/Testimonial";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
