@@ -8,6 +8,7 @@ import Mission from "./components/Mission";
 import OurPersonalities from "./components/Ourpersonalities";
 import Testimonials from "./components/Testimonial";
 import CallToAction from "./components/CallToAction";
+import Footer from "./components/Footer";
 function App() {
   
   return (
@@ -20,7 +21,9 @@ function App() {
       <OurPersonalities />
       <Testimonials />
       <CallToAction />
-      {/* Add other components here */}
+      <Footer />
+  
+    {/* Add other components here */}
     </>
   );
 }

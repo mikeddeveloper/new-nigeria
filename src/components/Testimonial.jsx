@@ -10,12 +10,12 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Obafemi Obasanjo",
       text: "Youth Engage changed my life. The mentorship and opportunities helped me discover who I am and what I can achieve.",
       image: "/images/obafemi.jpg",
     },
     {
-      name: "David Emmanuel",
+      name: "Funke Osibodu",
       text: "Being a part of Youth Engage opened doors for me. I’ve grown in confidence, skills, and leadership.",
       image: "/images/funke.jpg",
     },

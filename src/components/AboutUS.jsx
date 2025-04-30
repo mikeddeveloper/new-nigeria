@@ -27,9 +27,8 @@ const AboutUs = () => {
           <div className="text-section" data-aos="fade-right">
             <h3>Who We Are</h3>
             <p>
-              Youth Engage is a passionate movement focused on nurturing and empowering the next generation.
-              We believe every youth carries incredible potential, and through mentorship, events, and growth 
-              opportunities, we help them unlock it. Together, we are building leaders, creators, and changemakers!
+            Youth Engage is a Television Magazine programme concept, borne out of the minds of researching the minds of various youths in our society, to provide a platform for the transfer and inculcation of societal core values with a view  to securing a better future for our society.
+            
             </p>
             <div className="logo-box" data-aos="zoom-in">
               <img src="/images/yelogo.png" alt="Youth Engage Logo" />

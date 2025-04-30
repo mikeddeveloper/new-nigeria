@@ -27,9 +27,9 @@ const Mission = () => {
           <div className="text-section" data-aos="fade-right">
             <h3>Empowering Youth Everywhere</h3>
             <p>
-              Our mission is to provide platforms, tools, and support for youth to grow in leadership, creativity,
-              and community impact. Through events, media, education, and engagement, we strive to raise a generation
-              that’s informed, inspired, and ready to transform the world.
+            Youth Engage therefore seeks to get our youths and teens to meet our 
+            eminent and accomplished citizens and have them share their success 
+            stories, especially the challenges they surmounted to get to the top.
             </p>
             <div className="logo-box" data-aos="zoom-in">
               <img src="/images/yelogo.png" alt="Youth Engage Logo" />
