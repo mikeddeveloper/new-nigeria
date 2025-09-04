@@ -26,7 +26,7 @@ const Footer = () => {
 
           <div className="footer-contact">
             <h4>Our Address</h4>
-            <p>19A Aina Eleko by Cantonment Maryla, Lagos</p>
+            <p>19A Aina Eleko by Cantonment Maryland, Lagos</p>
             <div className="social-icons">
               <a href="#" aria-label="Facebook"><FaFacebookF /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
