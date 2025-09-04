@@ -22,7 +22,7 @@ function Navbar() {
       <div className="container d-flex align-items-center">
         <div className="d-flex align-items-center">
           <img src="/images/yelogo.png" alt="Logo" width="40" height="40" className="me-2" />
-          <span className="navbar-brand mb-0 h1 fs-5">Youth Engage</span>
+          <span className="navbar-brand mb-0 h1 fs-5">Youth Engage Programme</span>
         </div>
 
         <button

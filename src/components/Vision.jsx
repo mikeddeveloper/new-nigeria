@@ -27,7 +27,7 @@ const Vision = () => {
           <div className="text-section" data-aos="fade-up">
             <h3>Inspiring a Generation</h3>
             <p>
-              At Youth Engage, our vision is to ignite a movement of young leaders who are bold, passionate,
+              At Youth Engage programme, our vision is to ignite a movement of young leaders who are bold, passionate,
               and driven to create positive change in their communities and beyond. We envision a future where
               every youth is empowered, confident, and capable of shaping a better tomorrow.
             </p>

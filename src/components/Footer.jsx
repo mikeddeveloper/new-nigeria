@@ -26,7 +26,7 @@ const Footer = () => {
 
           <div className="footer-contact">
             <h4>Our Address</h4>
-            <p>3 Oba Adetona Street, Off Sura Mogaji Street, Ilupeju, Lagos</p>
+            <p>19A Aina Eleko by Cantonment Maryla, Lagos</p>
             <div className="social-icons">
               <a href="#" aria-label="Facebook"><FaFacebookF /></a>
               <a href="#" aria-label="Twitter"><FaTwitter /></a>
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="footer-map" data-aos="zoom-in-up">
           <iframe
             title="Youth Engage Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.6910609891086!2d3.265503574132071!3d6.619730021761828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9289cd6f6ab1%3A0xe29cb6c5acfb289f!2s3%20Oba%20Adetona%20Street%2C%20Ilupeju%2C%20Lagos!5e0!3m2!1sen!2sng!4v1684923724312!5m2!1sen!2sng"
+           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5248.187839700587!2d3.3609849209615117!3d6.569309944297284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b92767bc00001%3A0xebcd40c92f2b682c!2s19A%20Aina%20Eleko%20St%2C%20Ikeja%2C%20Lagos%20101233%2C%20Lagos!5e0!3m2!1sen!2sng!4v1756979150651!5m2!1sen!2sng"
             width="100%"
             height="300"
             style={{ border: 0 }}

@@ -5,16 +5,18 @@ import HeroSection from "./components/HeroSection";
 import AboutUs from "./components/AboutUS";
 import Vision from "./components/Vision";
 import Mission from "./components/Mission";
-import OurPersonalities from "./components/OurPersonalities";
+import OurPersonalities from "./components/Ourpersonalities";
 import Testimonials from "./components/Testimonial";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
+
 function App() {
   
   return (
     <>
       <Navbar />
       <HeroSection />
+      
       <AboutUs />
       <Vision />
       <Mission />
@@ -22,6 +24,7 @@ function App() {
       <Testimonials />
       <CallToAction />
       <Footer />
+     
   
     {/* Add other components here */}
     </>
