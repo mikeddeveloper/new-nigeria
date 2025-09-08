@@ -1,22 +1,27 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AboutUs from "./components/AboutUS";
 import Vision from "./components/Vision";
 import Mission from "./components/Mission";
-import OurPersonalities from "./components/OurPersonalities";
+import OurPersonalities from "./components/Ourpersonalities";
 import Testimonials from "./components/Testimonial";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
 
-function App() {
-  
+import Eventpages from "./components/Eventpages";
+import GalleryPage from "./components/GalleryPage";
+import Team from "./components/Team";
+
+function HomePage() {
   return (
     <>
-      <Navbar />
       <HeroSection />
-      
       <AboutUs />
       <Vision />
       <Mission />
@@ -24,10 +29,29 @@ function App() {
       <Testimonials />
       <CallToAction />
       <Footer />
-     
-  
-    {/* Add other components here */}
     </>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
+  return (
+    <Router>
+      <Navbar />
+
+      <Routes>
+        {/* Default homepage (with scroll sections) */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* New pages */}
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/events" element={<Eventpages />} />
+      </Routes>
+    </Router>
   );
 }
 
