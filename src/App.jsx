@@ -9,7 +9,7 @@ import HeroSection from "./components/HeroSection";
 import AboutUs from "./components/AboutUS";
 import Vision from "./components/Vision";
 import Mission from "./components/Mission";
-import OurPersonalities from "./components/OurPersonalities";
+import Personalities from "./components/Personalities";
 import Testimonials from "./components/Testimonial";
 import CallToAction from "./components/CallToAction";
 import Footer from "./components/Footer";
@@ -25,7 +25,7 @@ function HomePage() {
       <AboutUs />
       <Vision />
       <Mission />
-      <OurPersonalities />
+      <Personalities />
       <Testimonials />
       <CallToAction />
       <Footer />

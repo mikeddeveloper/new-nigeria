@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./OurPersonalities.css";
+import "./Personalities.css";
 
-const OurPersonalities = () => {
+const Personalities = () => {
   useEffect(() => {
     AOS.init({ duration: 1200, once: false });
   }, []);
@@ -59,4 +59,4 @@ const OurPersonalities = () => {
   );
 };
 
-export default OurPersonalities;
+export default Personalities;
