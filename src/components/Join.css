@@ -1,0 +1,77 @@
+.movement-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  text-align: center;
+}
+
+.movement-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #facc15;
+}
+
+.movement-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  opacity: 0.9;
+}
+
+.movement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.movement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movement-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.movement-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.movement-card:hover .movement-icon {
+  transform: rotate(10deg) scale(1.2);
+}
+
+/* Social specific colors */
+.insta {
+  color: #e1306c;
+}
+
+.twitter {
+  color: #1da1f2;
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.telegram {
+  color: #0088cc;
+}
+
+.movement-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.movement-card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}

@@ -4,11 +4,11 @@ import "./Team.css"; // separate CSS
 
 function Team() {
   const teamMembers = [
-    { name: "Member One", role: "Coordinator", img: "/images/member1.jpg" },
-    { name: "Member Two", role: "Media Lead", img: "/images/member2.jpg" },
+    { name: "Abraham Oyedele", role: "Founder", img: "/images/PA.jpg" },
+    { name: "Member Two", role: "Media Lead", img: "/images/ituah.jpg" },
     { name: "Member Three", role: "Technical", img: "/images/member3.jpg" },
-    { name: "Member Four", role: "Outreach", img: "/images/member4.jpg" },
-    { name: "Member Five", role: "Volunteer", img: "/images/member5.jpg" },
+    { name: "Member Four", role: "Graphics Designer", img: "/images/prosper.jpg" },
+    { name: "Adegboyega Michael", role: "Web Developer", img: "/images/mike.jpg" },
   ];
 
   return (

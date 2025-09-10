@@ -17,6 +17,9 @@ import Footer from "./components/Footer";
 import Eventpages from "./components/Eventpages";
 import GalleryPage from "./components/GalleryPage";
 import Team from "./components/Team";
+import VolunteerForm from "./components/VolunteerForm"; // ✅ New Volunteer form page
+import Join from "./components/Join";
+
 
 function HomePage() {
   return (
@@ -50,6 +53,8 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<Team />} />
         <Route path="/events" element={<Eventpages />} />
+        <Route path="/volunteer" element={<VolunteerForm />} /> {/* ✅ New route */}
+        <Route path="/join" element={<Join />} />
       </Routes>
     </Router>
   );
