@@ -6,7 +6,7 @@ function Team() {
   const teamMembers = [
     { name: "Abraham Oyedele", role: "Founder", img: "/images/PA.jpg" },
     { name: "Member Two", role: "Media Lead", img: "/images/ituah.jpg" },
-    { name: "Member Three", role: "Technical", img: "/images/member3.jpg" },
+    { name: "Alakpakristi Samuel", role: "Social Media Manager", img: "/images/cm.jpg" },
     { name: "Member Four", role: "Graphics Designer", img: "/images/prosper.jpg" },
     { name: "Adegboyega Michael", role: "Web Developer", img: "/images/mike.jpg" },
   ];

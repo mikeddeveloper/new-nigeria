@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Join.css";
-import { FaInstagram, FaTwitter, FaYoutube, FaTelegramPlane, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaYoutube, FaTelegramPlane } from "react-icons/fa";
 
 const Join = () => {
   useEffect(() => {
@@ -66,8 +66,8 @@ const Join = () => {
             data-aos="zoom-in"
             data-aos-delay="600"
           >
-            <FaTiktok className="movement-icon telegram" />
-            <h3>Tiktok</h3>
+            <FaTelegramPlane className="movement-icon telegram" />
+            <h3>Telegram</h3>
             <p>Join the conversation in our community.</p>
           </a>
         </div>
