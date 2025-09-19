@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import "./GalleryPage.css";
 
 const images = [
@@ -10,40 +12,32 @@ const images = [
   { src: "/images/fela4.jpg", caption: "Cherished Times" },
   { src: "/images/fela5.jpg", caption: "Golden Hours" },
   { src: "/images/fela6.jpg", caption: "Unforgettable Smiles" },
-  { src: "/images/fela7.jpg", caption: "Radiant Evenings" },
-  { src: "/images/fela8.jpg", caption: "Timeless Bonds" },
+  { src: "/images/fela7.jpg", caption: "Golden Hours" },
+  { src: "/images/fela8.jpg", caption: "Unforgettable Smiles" },
 ];
 
 const aosEffects = [
   "fade-up",
-  "fade-down",
   "zoom-in",
-  "zoom-in-up",
   "flip-left",
-  "flip-right",
   "fade-up-right",
   "fade-up-left",
+  "zoom-in-up",
 ];
 
 const GalleryPage = () => {
-  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1200, once: true, easing: "ease-in-out" });
   }, []);
 
-  const nextImage = () =>
-    setSelectedIndex((prev) => (prev + 1) % images.length);
-
-  const prevImage = () =>
-    setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
-
   return (
     <div className="gallery-page">
-      <div className="gallery-header" data-aos="fade-down">
-        <h1 className="gradient-text">Our Gallery</h1>
-        <p>A collection of treasured and unforgettable moments ✨</p>
-      </div>
+      <h1 className="gallery-title" data-aos="fade-down">Our Gallery</h1>
+      <p className="gallery-subtitle" data-aos="fade-down">
+        A collection of our most treasured moments
+      </p>
 
       <div className="gallery-grid">
         {images.map((img, index) => (
@@ -51,9 +45,15 @@ const GalleryPage = () => {
             className="gallery-card"
             key={index}
             data-aos={aosEffects[index % aosEffects.length]}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => setSelectedImage(img)}
           >
-            <img src={img.src} alt={img.caption} />
+            {/* LazyLoadImage with blur effect */}
+            <LazyLoadImage
+              src={img.src}
+              alt={img.caption}
+              effect="blur"
+              className="gallery-img"
+            />
             <div className="overlay">
               <span>{img.caption}</span>
             </div>
@@ -62,29 +62,12 @@ const GalleryPage = () => {
       </div>
 
       {/* Lightbox */}
-      {selectedIndex !== null && (
-        <div className="lightbox" onClick={() => setSelectedIndex(null)}>
-          <div
-            className="lightbox-content"
-            onClick={(e) => e.stopPropagation()}
-            data-aos="zoom-in"
-          >
-            <button className="close-btn" onClick={() => setSelectedIndex(null)}>
-              ✕
-            </button>
-
-            <button className="nav-btn prev" onClick={prevImage}>
-              ⟵
-            </button>
-            <img
-              src={images[selectedIndex].src}
-              alt={images[selectedIndex].caption}
-            />
-            <button className="nav-btn next" onClick={nextImage}>
-              ⟶
-            </button>
-
-            <p>{images[selectedIndex].caption}</p>
+      {selectedImage && (
+        <div className="lightbox" onClick={() => setSelectedImage(null)}>
+          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setSelectedImage(null)}>✕</button>
+            <img src={selectedImage.src} alt={selectedImage.caption} />
+            <p>{selectedImage.caption}</p>
           </div>
         </div>
       )}
