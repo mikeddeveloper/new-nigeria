@@ -4,48 +4,46 @@ import "aos/dist/aos.css";
 import "./GalleryPage.css";
 
 const images = [
-  { src: "/images/cm.jpg", caption: "Moments of Joy" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Beautiful Memories" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Capturing Love" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Cherished Times" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Golden Hours" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Unforgettable Smiles" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Moments of Joy" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Beautiful Memories" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Capturing Love" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Cherished Times" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Golden Hours" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Unforgettable Smiles" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Moments of Joy" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Beautiful Memories" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Capturing Love" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Cherished Times" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Golden Hours" },
-  { src: "/src/assets/gallery/funke.jpg", caption: "Unforgettable Smiles" },
+  { src: "/images/fela1.jpg", caption: "Moments of Joy" },
+  { src: "/images/fela2.jpg", caption: "Beautiful Memories" },
+  { src: "/images/fela3.jpg", caption: "Capturing Love" },
+  { src: "/images/fela4.jpg", caption: "Cherished Times" },
+  { src: "/images/fela5.jpg", caption: "Golden Hours" },
+  { src: "/images/fela6.jpg", caption: "Unforgettable Smiles" },
+  { src: "/images/fela7.jpg", caption: "Radiant Evenings" },
+  { src: "/images/fela8.jpg", caption: "Timeless Bonds" },
 ];
 
 const aosEffects = [
   "fade-up",
+  "fade-down",
   "zoom-in",
+  "zoom-in-up",
   "flip-left",
+  "flip-right",
   "fade-up-right",
   "fade-up-left",
-  "zoom-in-up",
 ];
 
 const GalleryPage = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
     AOS.init({ duration: 1200, once: true, easing: "ease-in-out" });
   }, []);
 
+  const nextImage = () =>
+    setSelectedIndex((prev) => (prev + 1) % images.length);
+
+  const prevImage = () =>
+    setSelectedIndex((prev) => (prev - 1 + images.length) % images.length);
+
   return (
     <div className="gallery-page">
-      <h1 className="gallery-title" data-aos="fade-down">Our Gallery</h1>
-      <p className="gallery-subtitle" data-aos="fade-down">
-        A collection of our most treasured moments
-      </p>
+      <div className="gallery-header" data-aos="fade-down">
+        <h1 className="gradient-text">Our Gallery</h1>
+        <p>A collection of treasured and unforgettable moments ✨</p>
+      </div>
 
       <div className="gallery-grid">
         {images.map((img, index) => (
@@ -53,7 +51,7 @@ const GalleryPage = () => {
             className="gallery-card"
             key={index}
             data-aos={aosEffects[index % aosEffects.length]}
-            onClick={() => setSelectedImage(img)}
+            onClick={() => setSelectedIndex(index)}
           >
             <img src={img.src} alt={img.caption} />
             <div className="overlay">
@@ -64,12 +62,29 @@ const GalleryPage = () => {
       </div>
 
       {/* Lightbox */}
-      {selectedImage && (
-        <div className="lightbox" onClick={() => setSelectedImage(null)}>
-          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setSelectedImage(null)}>✕</button>
-            <img src={selectedImage.src} alt={selectedImage.caption} />
-            <p>{selectedImage.caption}</p>
+      {selectedIndex !== null && (
+        <div className="lightbox" onClick={() => setSelectedIndex(null)}>
+          <div
+            className="lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+            data-aos="zoom-in"
+          >
+            <button className="close-btn" onClick={() => setSelectedIndex(null)}>
+              ✕
+            </button>
+
+            <button className="nav-btn prev" onClick={prevImage}>
+              ⟵
+            </button>
+            <img
+              src={images[selectedIndex].src}
+              alt={images[selectedIndex].caption}
+            />
+            <button className="nav-btn next" onClick={nextImage}>
+              ⟶
+            </button>
+
+            <p>{images[selectedIndex].caption}</p>
           </div>
         </div>
       )}
