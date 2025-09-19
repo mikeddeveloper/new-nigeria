@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "./GalleryPage.css";
 
 const images = [
-  { src: "/src/assets/gallery/funke.jpg", caption: "Moments of Joy" },
+  { src: "/images/cm.jpg", caption: "Moments of Joy" },
   { src: "/src/assets/gallery/funke.jpg", caption: "Beautiful Memories" },
   { src: "/src/assets/gallery/funke.jpg", caption: "Capturing Love" },
   { src: "/src/assets/gallery/funke.jpg", caption: "Cherished Times" },
